@@ -1,0 +1,7 @@
+hook.Add("HUDPaint", "DrawServerInfoHUD", function()
+    local map = game.GetMap()
+    local players = #player.GetAll()
+    local maxplayers = game.MaxPlayers()
+    draw.SimpleText("Serveur: " .. GetHostName(), "Trebuchet18", ScrW() - 10, 10, Color(255,255,255), TEXT_ALIGN_RIGHT, TEXT_ALIGN_TOP)
+    draw.SimpleText("Joueurs: " .. players .. "/" .. maxplayers .. " | Map: " .. map, "Trebuchet18", ScrW() - 10, 30, Color(180,180,180), TEXT_ALIGN_RIGHT, TEXT_ALIGN_TOP)
+end)
